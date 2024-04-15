@@ -1,15 +1,15 @@
- <template>
+<template>
       <div  >
         <p>
-           <span>{{todo}}</span>
+          <span>{{todo}}</span>
           <input type="checkbox" @change="markCompleted"  />
           
-          <button @click="deleteTodo">x</button>
+          <button @click="removeTodo">x</button>
         </p>
       </div>
-    </template>
-    
-    <script>
+</template>
+
+ <script>
     export default {
   
   props: ["todo"],
@@ -22,11 +22,13 @@
   },
   methods: {
     
-    markComplete(id) {
-      this.todoLocal(id).completed = !this.todoLocal(id).completed;
-    },
+    // markComplete(todo) {
+    //   this.todoLocal(todo).completed = !this.todoLocal(todo).completed;
+    // },
 
-    
+    // removeTodo(todo) {
+    //   this.todos.splice(todo)
+    // }
   },
-};
-    </script>
+  };
+</script>

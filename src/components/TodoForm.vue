@@ -14,7 +14,8 @@ export default {
     };
   },
   methods: {
-    addTodo() {
+    addTodo() { 
+      if (this.newItemTitle.trim() !== '') {
            this.$emit('add', this.newItemTitle, {completed: false} );
       // this.newItemTitle = '';
       // this.todos.push({
@@ -24,6 +25,7 @@ export default {
       // });
       
       this.newItemTitle = '';
+      }
     }
     
   }
